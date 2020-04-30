@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="Site">
+    <div class="Site-content">
+        <div class="note-taker">
+            <h1 class="title">Note Taker Storage App</h1>
+            <h2 class="subtitle">Save and Download your notes with Local & Session Storage</h2>
+            <div class="storage-buttons">
+                <a class="clear">Clear Storage</a>
+                <a class="empty">Empty Storage</a>
+            </div>
+            <div id="storage-quota-msg"></div>
+            <div class="file-save-button">
+                        <a id="save">Download Notes</a>
+                    </div>
+            <div class="textarea-wrapper">
+                <textarea name="text" class="session-storage" id="textArea" cols="50"
+                    rows="10">Hi there! Use this text box to take notes and save as a text file! Click on 'Clear Storage' to begin.</textarea>
+                    <button type="button" id="save-text">Save Text</button>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <script>
+            const theDate = new Date();
+            const footer = document.querySelector(".site-footer");
+            footer.style.fontWeight = "300";
+            footer.style.fontFamily = "Spartan, sans-serif";
+            footer.innerHTML =
+                `Siobhan Lynch © ${theDate.getFullYear()}`;
+        </script>
+    </footer>
+    <script src="session.js"></script>
+</body>
+
+</html>
